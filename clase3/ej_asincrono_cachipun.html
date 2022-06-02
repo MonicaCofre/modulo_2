@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>EJERCICIO ASINCRONO </h1>
+    <script>
+// EJERCICIO JavaScript Básico - Ejercicio asincrónico 05
+        //CACHIPUN - hacer ciclo infinito
+
+
+
+        const jugar = parseInt(prompt('Desea jugar \n 1: si \n 2: No'))
+        //if( jugar === "1"){
+          while( jugar <2){
+              const q_veces = parseInt(prompt('Ingrese la cantidad de veces que desea jugar'))
+              let i = 1
+              let ptje_hum = 0;
+              let ptje_comp = 0;
+
+            while (i <= q_veces){
+                const jugador = prompt('Ingrese qué desea jugar\n 1: Piedra\n 2: Papel\n 3: Tijeras')
+                // generamos un numero al azar entre [0,3[
+                const azar = Math.random()*3
+                // vemos que jugada le toca al computador 
+                let computador;
+                  if(azar < 1){
+                    computador='1'
+                  }else if(azar < 2){
+                    computador='2'
+                  }if(azar < 3){
+                    computador='3'
+                  }
+
+                  // vemos todos los escenarios posibles
+                  // si el jugador elije piedra
+                  if(jugador == '1'){
+                    if(computador =='1'){
+                      alert('ambos empatan con piedra')
+                    }
+                    else if(computador =='2'){
+                      alert('computador gana con papel a piedra')
+                      ptje_comp++
+                    }
+                    else{
+                      alert('usted gana con piedra a tijera')
+                      ptje_hum++
+                    }  
+                  }
+                  // si el jugador elije papel
+                  else if(jugador == '2'){
+                    if(computador =='1'){
+                      alert('usted gana con papel a piedra')
+                      ptje_hum++
+                    }
+                    else if(computador =='2'){
+                      alert('empate ambos con papel')
+                      
+                    }
+                    else{
+                      alert('el computador gana con tijeras a papel')
+                      ptje_comp++;
+                    }
+                  }  
+                  // si el jugador elije tijeras
+                  else {
+                    if(computador =='1'){
+                      alert('usted pierde con tijeras a la piedra')
+                      ptje_comp++;
+                    }
+                    else if(computador =='2'){
+                      alert('usted gana con tijeras al papel')
+                      ptje_hum++;
+                    }
+                    else{
+                      alert('empate ambos con tijeras')              
+                    }
+                  }  
+                  i++;
+            }  
+            
+            alert('Los puntajes son:\n Humano: '+ ptje_hum +'\n Computador: '+ptje_comp) 
+        
+            let desea_jugar = parseInt(prompt('Desea volver a Jugar\n Si: Seleccione 1 \n No: Seleccione 2'));            
+              if (desea_jugar >= 2) {
+              break;            
+              }
+          }
+                      
+
+        //let preg = prompt('¿Desea seguir jugando? \n marque\n 1: si su respuesta es SI \n  2: Si su respuesta es NO')
+        
+        
+        
+        
+        
+        
+    </script>
+
+
+</body>
+</html>

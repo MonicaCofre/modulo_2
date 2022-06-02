@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mod 2</title>
+</head>
+<body>
+    <h1>Bucles - clase 3 ejercicios minutos</h1>
+    <script>
+        let minutos= 5;
+        let minutero = 0;
+        
+
+        while(minutero <= minutos){
+            let segundos = 60;
+            let segundero = 1;
+
+            while(segundero < segundos){
+
+                let msje= ""
+                if(minutero == 1){
+                msje = "1 minuto"
+                }else{
+                msje= minutero + " minutos "
+                }
+                
+                if(segundero == 1){
+                msje = msje +" 1 segundo"
+                }else{
+                msje= msje + segundero + " segundos"
+                }
+            
+               
+                console.log(msje)
+
+            segundero ++ // Esta es la condicion de corte o medida de seguridad del loop anidado
+            }
+            
+            minutero ++; // esta es la cond de corte o  medida de seguridad del loop madre.
+        }
+    </script>
+</body>
+</html>
