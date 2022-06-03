@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejercicio en clase</h1>
+
+    <p>
+    En este ejercicio deberás crear una Función que devuelva un Arreglo con sus elementos invertidos, sin modificarlo. Luego, deberás hacer una Función que lo modifique e invierta el orden de sus elementos.  
+    </p>
+
+
+    <script>
+
+/*
+
+PISTA: ¿Cómo abordar este ejercicio?
+Te damos algunas pistas para que pienses en este ejercicio.
+
+1. Creá la Función printReverse que tome un Arreglo como Argumento y que imprima en la consola cada elemento en orden inverso (no tenés que invertir el Arreglo). */
+
+let arreglo = [1,2,3,4,5]
+
+
+function printReverse (lista){
+    for(let i= lista.length - 1; i >= 0; i--){
+    console.log(lista[i])  
+    }
+    
+}
+
+
+
+ /* 2. Creá la Función reverser que tome un Arreglo como Argumento y devuelva uno nuevo invertido.
+Usá este código para testear tus Funciones:
+reverser(["a", "b", "c"]) // ["c","b", "a"]
+reverser([1, 2, 3, 4]) // [4, 3, 2, 1]*/ 
+
+let arreglos = [1,2,3,4,5]
+
+function reverser (lista){
+    const clon = lista.slice()
+    const retorno = []
+    while (clon.length > 0) {
+        const elemento = clon.pop()
+        retorno.push(elemento)
+    }
+
+    return retorno
+}
+
+
+    </script>
+</body>
+</html>

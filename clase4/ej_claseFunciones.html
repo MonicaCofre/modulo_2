@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FUNCIONES  -  Matemática simple</h1>
+
+
+
+    <script>
+
+
+
+//1. Una f que se llame triplicador que tome un número como input (osea, como Parámetro) y retorne el triple de ese valor. 
+    function triple(n_1){
+    const tripl= n_1 * 3
+    return tripl   
+    }
+   
+
+//2. Una f multiplicador que tome dos números como Parámetros y devuelva el producto de los dos.
+    function multiplicador(n_1, n_2){
+    const multi = n_1 * n_2
+    return multi  
+    }
+
+    
+//3. Una f división que tome dos números como Parámetros y devuelva el resultado de dividir el primero por el segundo.
+    function division(n_1, n_2){
+    const divi= n_1 / n_2
+    return divi 
+    }
+
+//4. Una f resto que tome dos números como Parámetros y devuelva el resultado del módulo del primero sobre el segundo.
+    function resto(n_1, n_2){
+    const rest = n_1 % n_2 
+    return rest 
+    }
+    
+
+
+//5. Por último, calcula el valor de triplicar 5, luego multiplicar eso por 12, dividir por 12 y encontrar el resto de dividir eso en 3. Importante: Use solamente las funciones que escribiste antes, sin otros operadores.
+
+    function cinco(){
+      let resultado= resto(division(multiplicador(triple(5),12),12),3);
+      return resultado
+    }
+    
+    
+    </script>
+</body>
+</html>
