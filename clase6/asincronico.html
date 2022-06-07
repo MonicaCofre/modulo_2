@@ -75,14 +75,15 @@ arregloDeObjetos(3, “chau”) debe retornar [{chau: 1}, {chau: 2},
 
 function arregloDeObjetos(numero, palabra){
     let array = []
-    for(let i = 1; i < numero.length; i++){
-        array[i]={
-            [palabra]:i
-        }   
+    for(let i = 0; i < numero; i++){
+        array[i]={ 
+            [palabra]:i 
+        };        
     }        
     return array
 }
 
+console.log(arregloDeObjetos(8,'hola'))
 
 
 
