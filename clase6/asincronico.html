@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> JavaScript Básico - Ejercicio asincrónico</h1>
+
+
+
+
+<h1>JavaScript Básico - Ejercicio asincrónico  </h1> 
+
+
+
+    
+
+
+
+
+    <script>
+
+/* En este ejercicio, deberás crear un Arreglo llamado películas, que tenga -por cada película- un Objeto con las siguientes Propiedades:
+● titulo
+● rating
+● loHasVisto
+Usá un for loop para iterar sobre el Arreglo e imprimir un resultado en la consola
+que se vea como esto:
+Puedes usar tus propias películas. */
+
+const peliculas = [
+    {
+        titulo: 'Busqueda implacable', 
+        rating: 4,
+        loHasVisto: false
+    },
+    {
+        titulo: 'Shrek', 
+        rating: 5,
+        loHasVisto: true 
+    },
+    {
+        titulo: 'La vida es bella', 
+        rating: 3,
+        loHasVisto: false
+    },
+    {
+        titulo: '500 días con ella', 
+        rating: 5,
+        loHasVisto: true
+    }
+]
+
+for(let i = 0; i < peliculas.length; i++){
+    if(peliculas[i].loHasVisto){
+        console.log('Viste' + ' "' + peliculas[i].titulo + '" - ' + peliculas[i].rating + ' estrellas');
+    } else {
+        console.log('No viste' + ' "' + peliculas[i].titulo + '" - ' + peliculas[i].rating + ' estrellas');
+    }    
+};
+
+
+/*Debés crear una función llamada `arregloDeObjetos` que reciba un número y una palabra como parámetro y devuelva un arreglo de objetos que tenga: una propiedad llamada como la palabra pasada por parámetro y el valor del número y sus anteriores.
+1
+Ejemplo:
+arregloDeObjetos(5, “hola”) debe retornar [{hola: 1}, {hola: 2},
+{hola: 3}, {hola: 4}, {hola: 5 }]
+arregloDeObjetos(3, “chau”) debe retornar [{chau: 1}, {chau: 2},
+{chau: 3}]*/
+
+
+
+function arregloDeObjetos(numero, palabra){
+    let array = []
+    for(let i = 1; i < numero.length; i++){
+        array[i]={
+            [palabra]:i
+        }   
+    }        
+    return array
+}
+
+
+
+
+
+    
+
+    </script>
+</body>
+</html>
