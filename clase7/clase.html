@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .verde{
+            color: rgb(51, 126, 58);
+            background: orange;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Ejemplos del DOM</h2>
+    <p id = "primero" class="verde">ESTE ES EL PRIMER PARRAFO</p>
+    <p class="segundo">ESTE ES EL SEGUNDO PARRAFO</p>
+
+    <footer>
+        <div id="year">2020</div>
+
+    </footer>
+    <script>
+    // querySelector    
+        const etiq_h2 = document.querySelector('h2');
+    // cada tag  HTML tiernr ptopiedad style que me permite cambiar sus propiedades css
+    // son variables de tipo objetos     
+        etiq_h2.style['text-decoration']='underline';
+        etiq_h2.style.margin ='2 rem';
+    // tbn podemos agregar clases css ya definidas, le quitaremos la clase verde al primer parrafo y se la pondremos al segundo
+        const primero = document.querySelector('#primero');
+        primero.classList.remove('verde');
+
+        const segundo = document.querySelector('.segundo');
+        segundo.classList.add('verde');
+
+
+    // podemos cambiar el cont. interno de una etiqueta con textContent (solo texto) o innerHTML
+        etiq_h2.textContent ='Ejemplos de manipulacion del DOM usando JS';
+    
+        console.log(segundo.innerHTML)
+        segundo.innerHTML = 'ahora agregamos un enlace hacia <a href = "http://plataforma5.iicap.cl/">Plataforma 5</a>' 
+
+
+        const enlace = document.querySelector('a');
+        enlace.setAttribute('target', '_blank')
+    // querySelectorAll
+    // innertHTML 
+    // setAtribute / get
+
+
+
+    // como agregar o eliminar nuevas etiquetas
+    // 1 creamos etiqueta nueva
+    const div_footer = document.createElement('div')
+    // 2 le damos un contenido
+    div_footer.innerHTML= '<p>Todos los derechos reservados, consultas a: </p>'
+    // 3 nos traemos la etiqueta madre a una variable
+    const footer= document.querySelector('footer')
+    // 4 agregamos etiqueta hija a la madre
+    footer.appendChild(div_footer)
+    
+
+
+
+    // eliminar etiquetas ya existentes
+
+    const year =document.querySelector('#year');
+
+    footer.removeChild(year)
+
+
+    </script>
+    
+
+
+
+
+
+
+</body>
+</html>

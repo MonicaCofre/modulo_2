@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .imagenes {
+      width: 8rem;
+    }
+
+    div{
+      border: 2px solid black
+      
+    }
+  </style>
+
+
+
+</head>
+
+<body>
+  <h1> JavaScript básico - Ejercicio en clase </h1>
+  <!-- 1. En tu HTML creá un <div> con ID source y otro con ID destination (ambos con texto dentro).
+2. Seleccioná ambos y guardalos en sus respectivas Variables.
+3. Luego, intercambiá el contenido entre ambos <div> (es decir, que el texto del <div> de ID source pase al de ID destination y viceversa).-->
+
+  <div id="source">
+    <p class="uno">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit blanditiis ducimus hic? Libero, vel nam
+      </p>
+    <img class="imagenes" src="https://res.cloudinary.com/dkcufj8t5/image/upload/v1651707069/sample.jpg" alt="flor">
+  </div>
+  <div id="destination">
+    <p class="dos">
+      El dolor en sí, es importante dar el primer paso. ¿Nos impide halagar aquí? Libertad, o, en tiempos de placer
+    </p>
+    <img class="imagenes" src="https://res.cloudinary.com/dkcufj8t5/image/upload/v1651707093/cld-sample.jpg"
+      alt="mujer">
+  </div>
+
+
+  <script>
+
+    const primero = document.querySelector('#source');
+    const segundo = document.querySelector('#destination');
+    const aux = primero.innerHTML; 
+    primero.innerHTML = segundo.innerHTML
+    segundo.innerHTML = aux;
+    
+
+  </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

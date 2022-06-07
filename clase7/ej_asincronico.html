@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio asincrónico</title>
+</head>
+<style>
+    #divId {
+        border: 2px solid rgb(186, 26, 235);
+        border-radius: 7px;
+
+    }
+</style>
+
+<body>    
+<!-- 1. Creá un archivo HTML que, dentro de su <body> solo tenga un título <h1>.-->
+    <h1 id="titulo">Ejercicio asincrónico clase 7</h1>
+    <div id="divId">
+        <p>hola</p>
+    </div>
+    <script>
+        // 2. Por consola, cambiá el texto del título. ● Para cambiar el texto del título, usá la Propiedad textContent.
+
+        let hUno = document.querySelector('h1');
+        console.log(hUno.textContent)
+        hUno.textContent = 'Cambiando h1'
+
+        /*3. Por consola, cambiá el título por un párrafo con un texto a elección.
+        ● Para cambiar el título por un párrafo, usá la Propiedad innerHTML.*/
+
+        const parrafo = document.querySelector('#titulo');
+        console.log(titulo.innerHTML)
+        titulo.innerHTML = '<p> ahora cambiamos a un  parrafo en vez de un titulo</p>'
+
+        /*4. Por consola, agregá otro párrafo al <body> con un texto a elección.
+        ● Para agregar otro párrafo al <body>, usá appendChild.*/
+
+        const n_parrafo = document.createElement('p');
+        n_parrafo.innerHTML = '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi maxime  </p>'
+        const body = document.querySelector('body');
+        body.appendChild(n_parrafo);
+
+
+        // EJERCICIO ASINCRONICO 3 - Manipular CSS
+
+        // 1. Creá un documento HTML con un <div> dentro. - en body HTML
+        // 2. Usando la Propiedad style del elemento en JavaScript, dale a ese <div>  altura, ancho y un color de fondo.
+        const idDiv = document.querySelector('#divId');
+        idDiv.style.width = '20rem';
+        idDiv.style.heigth = '20rem';
+        idDiv.style.background = 'red';
+
+
+        /* 3. Creá la clase .square en tu stylesheet, y dale las mismas Propiedades.
+            4. Ahora en vez de agregársela con la Propiedad style, hacelo con la Propiedad classList.*/
+        idDiv.classList.add('square');
+
+        //¿Qué devuelve div.classList ?
+
+        /* idDiv.classList
+        DOMTokenList ['square', value: 'square']
+        0: "square"
+        length: 1
+        value: "square"
+        [[Prototype]]: DOMTokenList */
+            
+        //5. Desde tu consola, sacá la clase.square al < div >.
+        idDiv.classList.remove('square');
+        undefined
+
+        /* 6. Hacé una Función que cada un segundo(setInterval()) se fije si tiene la clase.square.Si la tiene, que se la quite; si no la tiene, que se la agregue.
+            PISTA: Si lo hiciste con un if y un else no está mal… pero probá usando classList.toggle().Mucho más simple, ¿no ?*/
+
+
+/* OPCION 1
+        setInterval(function () {
+            idDiv.classList.toggle("square")}, 1000);
+        }   
+*/        
+/*OPCION 2:*/      
+/*
+        function setIntervalo() {
+        document.querySelector("div").classList.toggle('square1500');
+        }
+        setInterval(setIntervalo, 1000);
+*/        
+/*OPCION 3:  Escribe solo una vez y despues detiene la f */ 
+        //myInterval = setInterval(idDiv.classList.toggle("square2000"), 1000);
+        myInterval = setInterval((idDiv.innerHTML += "Hello"), 1000);
+        
+        //Luego puede detener la ejecución llamando a clearInterval():
+        clearInterval(myInterval);
+        
+        
+            
+
+
+
+
+    </script>
+
+</body>
+
+</html>
