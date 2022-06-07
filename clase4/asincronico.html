@@ -42,6 +42,7 @@ Importante: Intentá no ayudarte con tu código anterior de Fizzbuzz.*/
 let numHasta = parseInt(prompt('¿hasta qué número quiere contar?'));
 let fizz = prompt('Escriba la palabra que llevaran los multiplos de 3');
 let buzz = prompt('Escriba la palabra que llevaran los multiplos de 5');
+let n_sinMultiplos = prompt('Escriba la palabra que llevaran los numeros no multiplos');
 
 
 for(let i = 1; i <= numHasta; i++){
@@ -56,7 +57,7 @@ for(let i = 1; i <= numHasta; i++){
             msj= i + ", " + buzz        
           }
           else{
-            msj = i + ", "
+            msj = i + ", " + n_sinMultiplos
           }
           console.log(msj)
           
