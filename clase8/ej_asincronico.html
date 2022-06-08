@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio asincrónico</title>
+
+    <style>
+        #class {
+            background-color: chartreuse;
+            width: 25rem;
+            min-height: 20rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Ejercicio 2</h1>
+
+    <div id="class">
+        <label class="label">Nombre color</label>
+        <input type="text" class="form" id="exampleInput" placeholder="Aquí">
+        <button class="btn">Enviar</button>
+    </div>
+
+
+
+    <script>
+        //2. Cuando el usuario ingrese un color en el input (por ejemplo, "red") y haga enter, el color de fondo deberá tomar ese color.
+        //3. Si el usuario presiona la tecla para borrar, el color deberá ser blanco otra vez. 
+        const cambioColor = document.querySelector('#class');
+        const colorIngresado = document.querySelector('#exampleInput');
+
+        colorIngresado.addEventListener('keyup', function (e) {
+            console.log(e)
+            if (e.keyCode == 13) {
+                let color = colorIngresado.value
+                cambioColor.style['background-color'] = color;
+            }
+            /*else if (color == number){
+                alert('No se aceptan numeros');
+            }*/        
+        })
+
+
+        /*Extra credit
+        Ahora, adapta tu código para que el usuario escriba en el input el color de fondo en
+        español. Limita tu código a colores primarios.
+        Desafío: Evitá usar if...else o switch... ¿Cómo lo harías?*/
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

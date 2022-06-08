@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<style>
+img{
+  width: 100%;
+}
+
+.class {
+  width: 20rem;
+  min-height: 20rem;
+  background-color: aqua;
+  padding: 3rem;
+}
+</style>
+
+</head>
+<body>
+  <h1>Ejercicios en clase Eventos en un Div</h1>
+  
+  <div id="divUno" class="class">
+    <img src="./frutas.jpg" alt="">
+  </div>
+
+
+  <script>
+
+let target = document.querySelector("#divUno")
+let img = document.querySelector("img")
+target.addEventListener("mouseenter", function(){
+  console.log('hola')
+	img.style.display = "block"
+})
+target.addEventListener("mouseleave", function(){
+  console.log('hola1')
+	img.style.display = "none"
+})
+
+
+
+  </script>
+
+
+</body>
+</html>
